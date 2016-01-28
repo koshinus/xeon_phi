@@ -1,0 +1,36 @@
+#pragma once
+
+#include <vector>
+#include <cinttypes>
+#include <boost/graph/graph_traits.hpp>
+#include <memory>
+#include <limits>
+#include <boost/iterator/counting_iterator.hpp>
+#include "detail/util/Collection.hpp"
+#include "detail/StaticGraphIterators.hpp"
+#include "detail/BasicGraphStructures.hpp"
+#include "detail/StaticGraphPropertyMaps.hpp"
+#include "detail/StaticGraphBuilder.hpp"
+#include "dynamic_util/BasicGraphStructures.hpp"
+#include "properties.hpp"
+
+struct NoProperties : public Properties<> {};
+
+template <typename VertexProperties = NoProperties, typename EdgeProperties = NoProperties>
+class DynamicGraph
+{
+public:
+    using edge_size_type = uint32_t;
+    using vertices_size_type = uint32_t;
+    using edges_size_type = uint32_t;
+    using degree_size_type = uint16_t;
+    using vertex_descriptor = vertices_size_type;
+private:
+    std::vector<DynamicVertex<>>
+    std::vector<> out_vertices_vec;
+    std::vector<> in_vertices_vec;
+
+
+};
+
+

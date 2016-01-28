@@ -1,0 +1,14 @@
+CC=gcc
+CFLAGS=-c -Wall
+LDFLAGS=-fopenmp -ls
+SOURCES=main.c simple_omp.c hard_omp.c func.h
+OBJECTS=$(SOURCES:.c=.o .h=.o)
+EXECUTABLE=main.x
+
+all: $(SOURCES) $(EXECUTABLE)
+	
+$(EXECUTABLE): $(OBJECTS) 
+	$(CC) $(LDFLAGS) $(OBJECTS) -o $@
+
+.cpp.o:
+	$(CC) $(CFLAGS) $< -o $@

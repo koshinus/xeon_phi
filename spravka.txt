@@ -1,0 +1,41 @@
+ssh u0109@alexbers.com -p 2222
+
+sudo apt-get install mc
+
+mc -> shell link
+WinSCP
+
+ll
+ls
+mc
+cd
+echo
+cat
+
+df -h
+logout
+
+cat /proc/meminfo
+cat /proc/cpuinfo
+
+
+[hpclab03@phi5 MIC]$ echo $LD_LIBRARY_PATH
+[hpclab03@phi5 MIC]$ echo $SINK_LD_LIBRARY_PATH
+
+export LD_LIBRARY_PATH=/opt/intel/mkl/lib/intel64:$LD_LIBRARY_PATH
+
+export SINK_LD_LIBRARY_PATH=/opt/intel/composer_xe_2015.2.164/compiler/lib/mic/:/opt/intel/mkl/lib/mic
+
+source /opt/intel/bin/compilervars.sh intel64
+
+icc -openmp offload.c -o offload.intel64
+
+micnativeloadex main.mic -l
+
+micnativeloadex main.mic
+
+micnativeloadex main.mic -e "OMP_NUM_THREADS=10"
+
+$LD_LIBRARY_PATH
+/opt/intel/composer_xe_2015.2.164/compiler/lib/intel64:/opt/intel/composer_xe_2015.2.164/mpirt/lib/intel64:/opt/intel/composer_xe_2015.2.164/ipp/../compiler/lib/intel64:/opt/intel/composer_xe_2015.2.164/ipp/lib/intel64:/opt/intel/composer_xe_2015.2.164/ipp/tools/intel64/perfsys:/opt/intel/composer_xe_2015.2.164/compiler/lib/intel64:/opt/intel/composer_xe_2015.2.164/mkl/lib/intel64:/opt/intel/composer_xe_2015.2.164/tbb/lib/intel64/gcc4.4:/opt/intel/composer_xe_2015.2.164/debugger/ipt/intel64/lib:/opt/intel/composer_xe_2015.2.164/compiler/lib/intel64:/opt/intel/composer_xe_2015.2.164/mpirt/lib/intel64:/opt/intel/composer_xe_2015.2.164/ipp/../compiler/lib/intel64:/opt/intel/composer_xe_2015.2.164/ipp/lib/intel64:/opt/intel/composer_xe_2015.2.164/ipp/tools/intel64/perfsys:/opt/intel/composer_xe_2015.2.164/compiler/lib/intel64:/opt/intel/composer_xe_2015.2.164/mkl/lib/intel64:/opt/intel/composer_xe_2015.2.164/tbb/lib/intel64/gcc4.4:/opt/intel/composer_xe_2015.2.164/debugger/ipt/intel64/lib
+npm install plaidchat -g
